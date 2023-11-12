@@ -4,9 +4,8 @@ subtitle: Carl-Eriks notater om tech og sånt
 layout: layouts/base.njk
 ---
 
-## Post pages
-
-The pages found in in the posts
+heisann
+## Innlegg
 
 <ul class="listing">
 {%- for page in collections.post -%}
