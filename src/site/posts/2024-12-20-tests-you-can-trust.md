@@ -14,7 +14,7 @@ The presentation [(online link)](https://docs.google.com/presentation/d/e/2PACX-
 
 I made use of Git as a pedagogical tool, using tags to show progress from a slow and error prone integration test based on real clock, randomness and sleeping threads, where I gradually improve it step-by-step to a state where it is fast and deterministic
 
-![https://github.com/fatso83/supporting-code/raw/sjef/trusted-tests/.assets/git-log-incremental.png](example of my approach)
+![example of my approach](https://github.com/fatso83/supporting-code/raw/sjef/trusted-tests/.assets/git-log-incremental.png)
 
 Keywords:
 - [Fakes](/tag/fakes) over other Test Doubles
