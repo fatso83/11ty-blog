@@ -7,6 +7,7 @@ tags:
     - bernhard
     - tdd
 title: "Julian's Christmas Gift"
+redirect_from: /posts/julegave/
 ---
 
 > Julian wanted a small collection of links
