@@ -1,0 +1,13 @@
+---
+title: "All tags"
+layout: "layouts/base.njk"
+---
+
+<ul>
+  {%- for t in collections.tagList -%}
+    <li>
+      <a href="/tags/{{ t | slug }}/">{{ t }}</a>
+      ({{ collections[t].length }})
+    </li>
+  {%- endfor -%}
+</ul>

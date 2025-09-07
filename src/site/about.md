@@ -4,15 +4,12 @@ layout: layouts/base.njk
 x-subtitle: 
 ---
 
-This blog should essentially serve as a repo for quick thoughts and notes, 
-documenting my own learning - both to serve as a reference to me in the future
-when I try to remember where I read something and what, and to 
-help in actually remember stuff by reading up summaries (backed by
-notes from the Readwise plugin).
+Carl-Erik Kopseng is a Norwegian programmer that lives in Oslo, Norway with his wife and two boys.
 
-Recurring themes are performance, architecture and how to achieve high-value test suites
-that are lightning fast – without tons of mocks and heavy setups.
+He enjoys
+- core knowledge - figuring out how things _really_ work
+- performance
+- first mover, figuring out how to achieve what there is no library or documented approach for 
+- core web development: all things MDN :)
+- creating pull requests for _everything_ he touches
 
-## Design?
-I have not put any big thought into design. I have found this stopped
-me in the past from writing anything. Content is king.

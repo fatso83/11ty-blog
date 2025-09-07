@@ -1,11 +1,12 @@
 ---
 date: 2023-11-12
 tags: 
-    - clean
     - architecture
     - hexagonal
     - bernhard
-    - tdd
+    - testing
+    - fakes
+    - functional core / imperative shell
 title: "Julian's Christmas Gift"
 redirect_from: /posts/julegave/
 ---

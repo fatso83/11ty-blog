@@ -5,13 +5,19 @@ templateEngineOverride: njk, md
 ---
 
 <p class="date">
-  Postlagt på <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
+  Posted on <time datetime="{{ date }}">{{ date | dateDisplay }}</time>
 </p>
 <main>
   {{ content | safe }}
-  <!--<div class="footnote">-->
-    <!--<p>-->
-      <!--This page is part of the posts section.-->
-    <!--</p>-->
-  <!--</div>-->
+  <div class="footnote">
+  Tags
+  {% set skip = ['all', 'nav', 'post', 'posts'] %}
+  <ul>
+  {%- for t in tags  | exclude(skip) -%}
+    <li>
+      <a href="/tags/{{ t | slug }}/">{{ t }}</a>
+    </li>
+  {%- endfor -%}
+  </ul>
+  </div>
 </main>

@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.tagList   # list of tag names
+  size: 1                     # one page per tag
+  alias: tag                  # the variable name in the template
+permalink: "/tags/{{ tag | slug }}/"
+layout: "layouts/base.njk"
+eleventyComputed:
+  # title: "Posts tagged {{ tag }}"
+  title: "{{ tag }}"
+---
+
+<!--<h1>Tag: {{ tag }}</h1> -->
+{% if tagMetadata[tag] and tagMetadata[tag].description %}
+  <p>{{ tagMetadata[tag].description }}</p>
+{% endif %}
+
+<ul>
+  {%- for item in collections[tag] | reverse -%}
+    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
+
