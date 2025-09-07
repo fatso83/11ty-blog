@@ -4,6 +4,7 @@ tags:
     - architecture
     - testing
     - fakes
+    - presentation
 title: "Presentation: Tests You Can Trust"
 ---
 
