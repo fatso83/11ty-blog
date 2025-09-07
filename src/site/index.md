@@ -23,3 +23,15 @@ that are lightning fast – without tons of mocks and heavy setups.
 {%- endfor -%}
 </ul>
 
+## Notes and snippets 
+Quick brain dumps and notes for keep
+
+<ul class="listing">
+{%- for page in collections.notes | reverse -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a> -
+    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
+  </li>
+{%- endfor -%}
+</ul>
+

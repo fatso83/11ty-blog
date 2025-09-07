@@ -10,7 +10,8 @@ templateEngineOverride: njk, md
 <main>
   {{ content | safe }}
   <div class="footnote">
-  Tags
+
+  <h3>Tags</h3>
   {% set skip = ['all', 'nav', 'post', 'posts'] %}
   <ul>
   {%- for t in tags  | exclude(skip) -%}
