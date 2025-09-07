@@ -20,5 +20,5 @@ Keywords:
 - [Fakes](/tag/fakes) over other Test Doubles
 - testing terminology
 - Sinon and Fake Timers
-- injecting a central `Clock` into Java application
+- injecting a central `java.time.Clock` into Java applications
 - resilience4j and how to test the timing logic in fast unit tests
