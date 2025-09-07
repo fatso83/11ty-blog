@@ -14,13 +14,41 @@ The slides builds upon years of learnings, but I was especially influenced by pu
 - [Anders Sveen's "the example"](https://github.com/anderssv/the-example) combines markdown docs of the approach along with Kotlin example code
 - [Use of Fakes for domain driven design and fast feedback loop](https://asgaut.com/use-of-fakes-for-domain-driven-design-and-fast-feedback-loop/)
 
-In the presentation, I made use of Git as a pedagogical tool, using tags to show progress from a slow and error prone integration test based on real clock, randomness and sleeping threads, where I gradually improve it step-by-step to a state where it is fast and deterministic.
-In the Javascript code, I show how one can conceptually test animation code that is tightly bound to Javascript timers, by utilising the `fake-timers` library from Sinon to drive the tests.
 
-![example of my approach](https://github.com/fatso83/supporting-code/raw/sjef/trusted-tests/.assets/git-log-incremental.png)
+<figure>
+    <img src="https://github.com/fatso83/supporting-code/raw/sjef/trusted-tests/.assets/git-log-incremental.png" />
+    <caption>Step by step through the commits</caption>
+</figure>
+
+In the presentation, I made use of Git as a pedagogical tool, using tags to show progress from a slow and error prone integration test based on real clock, randomness and sleeping threads, where I gradually improve it step-by-step to a state where it is fast and deterministic.
+In the Javascript code, I show how one can conceptually [test animation code](https://github.com/fatso83/supporting-code/blob/sjef/trusted-tests/js-examples/animation-logic.test.mjs) that is tightly bound to Javascript timers and the event loop, by utilising the `fake-timers` library from Sinon to drive the tests. This is a library I maintain and that is employed by Jest amongst others.
+
+```js
+it("should move in chunks of 100 steps per frame", async () => {
+    // Arrange
+    clock = fakeTimers.install();
+    const player = new Player();
+
+    // Act
+    const movePromise = movePlayer(player, 300);
+
+    // Assert
+    assert.equal(player.x, 0);
+    await clock.tickAsync(16);
+    assert.equal(player.x, 100);
+
+    await clock.tickAsync(16);
+    assert.equal(player.x, 200);
+
+    await clock.tickAsync(16);
+    assert.equal(player.x, 300);
+
+    return Promise.all([clock.runAllAsync(), movePromise])
+});
+```
 
 Keywords:
-- [Fakes](/tag/fakes) over other Test Doubles
+- [Fakes](/tags/fakes) over other Test Doubles
 - testing terminology
 - Sinon and Fake Timers
 - injecting a central `java.time.Clock` into Java applications
