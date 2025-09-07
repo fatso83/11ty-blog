@@ -1,9 +1,11 @@
-# EleventyOne
+# Oligofren 2.0
+> Netlify hosted 11ty blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/056b4a67-70e6-4af4-9be5-dee151b8e906/deploy-status)](https://app.netlify.com/sites/eleventyone/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95e7d55b-d422-4e46-8607-a38751299693/deploy-status)](https://app.netlify.com/projects/resonant-duckanoo-c5215e/deploys)
 
-Phil's first port of call when starting another project using Eleventy.
 
+## Tech basis
+Based on Phil Hawksworth [Eleventyone]](https://github.com/philhawksworth/eleventyone) template.
 This project scaffold includes:
 
 - [Eleventy](https://11ty.io) with a skeleton site
@@ -15,41 +17,14 @@ This project scaffold includes:
 - Serverless (FaaS) development pipeline with [Netlify Dev](https://www.netlify.com/products/dev) and [Netlify Functions](https://www.netlify.com/products/functions)
 
 
-![Eleventy screenshot](./eleventyone-template.jpg)
-
-
-## Instructions
-
-To get your own instance of this 11ty starter project cloned and deploying to Netlify very quickly, just click the button below and follow the instructions.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventyone)
-
-
-## Wait, what happens when I click that button?
-
-Good question. Here's what it will do...
-
-1. Netlify will clone the git repository of this project into your Github account. It will be asking for permission to add the repo for you.
-2. We'll create a new site for you in Netlify, and configure it to use your shiny new repo. Right away you'll be able to deploy changes simply by pushing changes to your repo.
-3. That's it really.
-
-
-## Prerequisites
-
-- [Node and NPM](https://nodejs.org/)
-- [Netlify CLI](https://github.com/netlify/cli)
-
 ## Running locally
 
 ```bash
-# install the dependencies
-npm install
-
 # External data sources can be stashed locally
 npm run seed
 
 # It will then be available locally for building with
-npom start
+npm start
 ```
 
 ## Add some Netlify helpers
