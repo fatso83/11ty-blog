@@ -7,7 +7,7 @@ tags:
     - testing
     - fakes
     - functional core / imperative shell
-title: "Julian's Christmas Gift"
+title: "Long lived testing approaches"
 redirect_from: /posts/julegave/
 ---
 
