@@ -1,67 +1,69 @@
 ---
-foodate: Last Modified
 date: 2023-11-12
 tags: 
     - clean
     - architecture
-title: "Julians julegave"
+    - hexagonal
+    - bernhard
+    - tdd
+title: "Julian's Christmas Gift"
 ---
 
-> Julian ønsket seg en liten samling av lenker
-til jul som han heller kunne se gjennom i steden for
-å søke gjennom dev-kanalen vår. Så da ble det laging
-av blogg på søndag 🤓
+> Julian wanted a small collection of links
+for Christmas that he could browse through instead of
+searching through our shared Slack channel. So it turned into
+a Sunday blog project 🤓
 
-Disse tre videoene (og tilhørende lenket materiale) er innhold med langt "shelf life" og vil være relevant om ti år også, så det er bare å ta tiden til hjelp. Det som er litt artig er at selv om de handler om helt forskjellige ting går det en rød tråd gjennom alle og de berører mye av de samme tingene. God design er universelt, antar jeg :)
+These three videos (and the associated linked material) are content with a long "shelf life" and will still be relevant ten years from now, so no need to rush. What's a bit funny is that even though they are about completely different things, there’s a common thread running through all of them, touching on many of the same themes. Good design is universal, I suppose :)
 
 ## Functional Core, Imperative Shell
-> En Hacker News-favoritt 
+> A Hacker News favorite 
 
-_Episk imponerende_ Gary Bernhard er mannen bak klassikerne ["Wat"](https://www.destroyallsoftware.com/talks) og "The Birth and Death of Javascript", de eneste programmerings-standupshowene jeg kommer på om Javascript 😃.
+_Epically impressive_ Gary Bernhard is the man behind the classics ["Wat"](https://www.destroyallsoftware.com/talks) and "The Birth and Death of Javascript," the only programming stand-up shows I can think of about Javascript 😃.
 
-I [denne screencasten](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell) introduserer og viser han hvordan man i praksis kan implementere et konsept som er funksjonelt i natur i en verden fylt med tilstand, gjennom bruk av et objektorientert språk (en bastard han kaller Faux OO 😄)
+In [this screencast](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell), he introduces and demonstrates how one can practically implement a concept that is functional in nature in a world full of state, by using an object-oriented language (a bastard he calls Faux OO 😄)
 
 <figure>
 <img src="https://kennethlange.com/wp-content/uploads/2021/03/functional_core_imperative_shell.png" />
-<figcaption>Kenneth Langes illustrasjon</figcaption>
+<figcaption>Kenneth Lange’s illustration</figcaption>
 </figure>
-Handler om hvordan du kan flytte bieffektene (nettverkskall, websockets, SSE, service workers og annen I/O) i applikasjonen din til utkantene av applikasjonen din, 
-mens du holder applikasjonslogikken/forretningsregler 
-i en trivielt testbar, funksjonell kjerne. 
+It’s about how you can move side effects (network calls, websockets, SSE, service workers, and other I/O) in your application to the edges of your application, 
+while keeping application logic/business rules 
+in a trivially testable, functional core. 
 
-Det er i bunn og grunn en av de mange arkitekturene
-som ligger tett opp til Uncle Bob's "Clean Architecture"
-([blogg](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) 
-& [bok](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)),
-som Ports and Adapters/Hexagonal Architecture, etc, men
-er for meg veldig mye enklere å forstå og omsette
-til kode, ettersom han faktisk viser koden til en Twitter-klient i screencasten, og greier å implementere FP i høyst _tilstandsfulle_ domener som opptegning på skjerm. Monader i praksis, uten akademikerhatten.
+It’s basically one of many architectures
+closely related to Uncle Bob's "Clean Architecture"
+([blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) 
+& [book](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)),
+like Ports and Adapters/Hexagonal Architecture, etc., but
+for me it’s much easier to understand and translate
+into code, since he actually shows the code for a Twitter client in the screencast, and manages to implement FP in highly _stateful_ domains like screen drawing. Monads in practice, without the academic hat.
 
-### Andre ressurser
-- [En god introartikkel av Kenneth Lange](https://kennethlange.com/functional-core-imperative-shell/)
-- Min ["Clean Architecture"-liste](https://github.com/stars/fatso83/lists/clean-architecture) med GitHub repoer som viser prinsipper fra Clean og lignende arkitektur _i praksis_.
+### Other resources
+- [A good intro article by Kenneth Lange](https://kennethlange.com/functional-core-imperative-shell/)
+- My ["Clean Architecture" list](https://github.com/stars/fatso83/lists/clean-architecture) with GitHub repos showing principles from Clean and similar architectures _in practice_.
 
 ## Millisecond Full Stack Acceptance Tests
-> [Aslak Hellesøy på GOTO 2019-konferansen](https://www.youtube.com/watch?v=sUclXYMDI94)
+> [Aslak Hellesøy at the GOTO 2019 conference](https://www.youtube.com/watch?v=sUclXYMDI94)
 
-Aslak Hellesøy er mannen bak Cucumber, et rammeverk for mer brukerhistoriesentrert testing som jeg _helt klart misforstod_ poenget med i første omgang. I likhet med nesten alle andre, virker det som, men dette foredrag åpnet øynene mine for hva han _egentlig_ forsøkte på.
+Aslak Hellesøy is the man behind Cucumber, a framework for more user-story-centered testing that I _definitely misunderstood_ the point of at first. Like almost everyone else, it seems, but this talk opened my eyes to what he was _really_ trying to do.
 
 <div class="yt-container">
 <iframe class="yt-video" src="https://www.youtube.com/embed/sUclXYMDI94?si=sQ6G3hEH9gzbDwSj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-Veldig inspirerende foredrag som viser fleksibiliteten i hva som kan oppnås gjennom lagdeling og klare grensesnitt i koden. 
+A very inspiring talk that shows the flexibility of what can be achieved through layering and clear interfaces in code. 
 
-Som en kommentar skrev
+As one commenter wrote
 
 > To put simply - if you decoupled your business logic from UI and DB you can just write unit tests against it and get high confidence about your business logic.
 
-Det er vel den gjennomgående tråden her - gjennom lagdeling kan man relativt friksjonsfritt oppnå superraske testsuiter uten masse mocks og tunge oppsett.
+That’s the recurring theme here – through layering one can relatively frictionlessly achieve super-fast test suites without tons of mocks and heavy setups.
 
 ## 🚀 TDD, Where Did It All Go Wrong 
 
-Ian Cooper tar opp alle misforståelsene som har forkvaklet Kent Becks budskap i [TDD-boka fra 2002](https://www.adlibris.com/no/bok/test-driven-development-9780321146533) i årene siden den ble utgitt. Her dukker også både Clean og Ports & Adapters opp underveis, så alt henger sammen med alt :-)
+Ian Cooper addresses all the misunderstandings that have distorted Kent Beck’s message in [the TDD book from 2002](https://www.adlibris.com/no/bok/test-driven-development-9780321146533) in the years since it was published. Both Clean and Ports & Adapters show up along the way, so everything connects :-)
 
 <div class="yt-container">
-<iframe class="yt-video" s
-src="https://www.youtube.com/embed/EZ05e7EMOLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/EZ05e7EMOLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
