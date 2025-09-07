@@ -25,22 +25,13 @@ In the Javascript code, I show how one can conceptually [test animation code](ht
 
 ```js
 it("should move in chunks of 100 steps per frame", async () => {
-    // Arrange
     clock = fakeTimers.install();
     const player = new Player();
 
-    // Act
     const movePromise = movePlayer(player, 300);
 
-    // Assert
     assert.equal(player.x, 0);
-    await clock.tickAsync(16);
-    assert.equal(player.x, 100);
-
-    await clock.tickAsync(16);
-    assert.equal(player.x, 200);
-
-    await clock.tickAsync(16);
+    await clock.tickAsync(3*16);
     assert.equal(player.x, 300);
 
     return Promise.all([clock.runAllAsync(), movePromise])
