@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
-    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "build": "cross-env ELEVENTY_ENV=prod eleventy",
-    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
+    "dev": "npm run integrate-devtools && ELEVENTY_ENV=dev eleventy --serve",
+    "build": "ELEVENTY_ENV=prod eleventy",
+    "seed": "ELEVENTY_ENV=seed eleventy",
+    "integrate-devtools": "./devtools-workspace.sh"
   },
   "repository": {
     "type": "git",
