@@ -13,6 +13,10 @@ title: "Rethinking TDD"
 
 Test-Driven Development (TDD) has been one of the most discussed—and misunderstood—practices in modern software development. Over the years, a lot of writing and guidance took a wrong turn: tests became fragile, development slowed, and teams lost faith. I recently saw Casey Muratori, TJ and the Primeagen raising these points in "The Standup" called ["How BAD is TDD?"](https://www.youtube.com/watch?v=kJWsFWY25GA): all turned out to love testing, but rarely in the TDD sense, apart from used to drive testing. How did TDD get here?
 
+<div class="yt-container">
+<iframe class="yt-video" src="https://www.youtube.com/embed/EZ05e7EMOLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 Today, I revisited Ian Cooper’s talk, [“TDD, Where Did It All Go Wrong?”][video]. Cooper revisits core ideas from Kent Beck’s books and clarifies what many of us got wrong about TDD—and how to get back on track. This actually addresses all of the concerns raised in Prime's ranty "standup".
 
 ## Where TDD Went Wrong

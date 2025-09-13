@@ -63,6 +63,7 @@ As one commenter wrote
 That’s the recurring theme here – through layering one can relatively frictionlessly achieve super-fast test suites without tons of mocks and heavy setups.
 
 ## 🚀 TDD, Where Did It All Go Wrong 
+> I reviewed this video in-depth in 2025: ["Rethinking TDD"](/posts/2025-09-13-rethinking-tdd/)
 
 Ian Cooper addresses all the misunderstandings that have distorted Kent Beck’s message in [the TDD book from 2002](https://www.adlibris.com/no/bok/test-driven-development-9780321146533) in the years since it was published. Both Clean and Ports & Adapters show up along the way, so everything connects :-)
 

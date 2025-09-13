@@ -81,7 +81,7 @@ p {
 .subtitle {
   font-size: 1.2em;
   margin-top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 ul,
@@ -165,7 +165,7 @@ code {
 }
 
 main {
-  margin-top: 4em;
+  margin-top: 2em;
 
   img {
     width: 100%;
