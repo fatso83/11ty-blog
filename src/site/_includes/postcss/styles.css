@@ -46,7 +46,7 @@ body {
     width: 600px;
   }
   @media (min-width: $wide) {
-    width: 700px;
+    width: 900px;
   }
 }
 
@@ -232,4 +232,20 @@ figure {
 
 figcaption {
   font-style: italic;
+}
+
+
+table, tr, td, th {
+    border: 1px dashed grey;
+    line-height: 1.2;
+    padding: 4px 8px;
+    border-collapse: collapse;
+}
+
+.responsive-table {
+    overflow-x: auto;
+
+    td {
+        min-width: 150px
+    }
 }
