@@ -29,12 +29,9 @@ In [this screencast](https://www.destroyallsoftware.com/screencasts/catalog/func
 <img src="https://kennethlange.com/wp-content/uploads/2021/03/functional_core_imperative_shell.png" />
 <figcaption>Kenneth Lange’s illustration</figcaption>
 </figure>
-It’s about how you can move side effects (network calls, websockets, SSE, service workers, and other I/O) in your application to the edges of your application, 
-while keeping application logic/business rules 
-in a trivially testable, functional core. 
+It’s about how you can move side effects (network calls, websockets, SSE, service workers, and other I/O) in your application to the edges of your application, while keeping application logic/business rules in a trivially testable, functional core. 
 
-It’s basically one of many architectures
-closely related to Uncle Bob's "Clean Architecture"
+It’s basically one of many architectures closely related to Uncle Bob's "Clean Architecture"
 ([blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) 
 & [book](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)),
 like Ports and Adapters/Hexagonal Architecture, etc., but
@@ -44,6 +41,7 @@ into code, since he actually shows the code for a Twitter client in the screenca
 ### Other resources
 - [A good intro article by Kenneth Lange](https://kennethlange.com/functional-core-imperative-shell/)
 - My ["Clean Architecture" list](https://github.com/stars/fatso83/lists/clean-architecture) with GitHub repos showing principles from Clean and similar architectures _in practice_.
+- [Funksjonell Kjerne, Imperativt Skall - Magnar Sveen](https://vimeo.com/1115860138?fl=pl&fe=sh) in Norwegian at Javazone 2025
 
 ## Millisecond Full Stack Acceptance Tests
 > [Aslak Hellesøy at the GOTO 2019 conference](https://www.youtube.com/watch?v=sUclXYMDI94)
