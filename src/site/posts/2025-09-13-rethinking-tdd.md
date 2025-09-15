@@ -25,6 +25,8 @@ A common anti-pattern is tying tests to class structures and implementation deta
 
 ### Getting Back on Track
 
+- _Behavior_ drives new tests. In TDD, new tests emerge because new behavior emerges — not because you want a tidy diagram.
+
 - Test behavior, not classes. Focus on observable outcomes of a module, not its internal structure.
 
 - No new tests for refactoring. Extracting a class doesn’t change behavior; you don’t need new tests for that.
@@ -36,8 +38,6 @@ A common anti-pattern is tying tests to class structures and implementation deta
 - Isolated tests ≠ isolated classes. _Tests_ shouldn’t interfere with each other. In Kent Beck's view, it’s fine to use files, networks, or databases if one test run can’t affect another (order, parallelism, etc.). Replacing I/O with in-mem versions is for _speed_, not test isolation.
 
 - Use _ports & adapters_ to set boundaries. That you test your logic from the outside does not mean you have to test using your HTTP endpoints directly; test the classes that sit at your domain boundaries.
-
-- _Behavior_ drives new classes. In TDD, new tests emerge because new behavior emerges — not because you want a tidy diagram.
 
 - Red → Green can be scrappy. You are allowed to create technical debt at this stage: paste the simplest code from StackOverflow that makes the test pass. Clean it up during Refactor; this is the step that the duct tape programmer misses, but that you can enjoy as you have non-brittle tests to cover that refactoring.
 
