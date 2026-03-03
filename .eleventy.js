@@ -20,6 +20,8 @@ module.exports = function (config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/.well-known");
+  // downloads
+  config.addPassthroughCopy("./assets");
 
   // Create tag categories
   // Build a unique list of tags (skip Eleventy’s utility tags)
