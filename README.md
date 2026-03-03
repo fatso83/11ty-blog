@@ -3,9 +3,10 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/95e7d55b-d422-4e46-8607-a38751299693/deploy-status)](https://app.netlify.com/projects/resonant-duckanoo-c5215e/deploys)
 
+[blog.kopseng.no](https://blog.kopseng.no/)
 
 ## Tech basis
-Based on Phil Hawksworth [Eleventyone]](https://github.com/philhawksworth/eleventyone) template.
+Based on Phil Hawksworth [Eleventyone](https://github.com/philhawksworth/eleventyone) template.
 This project scaffold includes:
 
 - [Eleventy](https://11ty.io) with a skeleton site
